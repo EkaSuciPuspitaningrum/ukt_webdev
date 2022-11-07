@@ -23,7 +23,7 @@
             @include('layouts.partials.messages')
     
             <div class="form-group form-floating mb-3">
-                <label for="floatingName">Email</label>
+                <label for="floatingName">Email atau Nama Lengkap</label>
                 <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" required="required" autofocus>
                 @if ($errors->has('email'))
                     <span class="text-danger text-left">{{ $errors->first('email') }}</span>
@@ -47,7 +47,7 @@
         </form>
         <br>
         <div class="float-right">
-            <a href="{{url("/regis")}}"
+            <a href="{{route("register.show")}}"
                 class="text-medium">
                 Belum punya akun?
             </a>

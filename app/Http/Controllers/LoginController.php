@@ -45,7 +45,7 @@ class LoginController extends Controller
             $this->setRememberMeExpiration($user);
         endif;
 
-        return $this->authenticated($request, $user);
+        return $this->authenticated($request, $user)->redirect('/');;
     }
 
     /**
